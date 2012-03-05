@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'rspec/autorun'
 
 describe PagesController do
   render_views
