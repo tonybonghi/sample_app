@@ -10,25 +10,22 @@ describe PagesController do
 
   describe "GET 'home'" do
     it "should be successful" do
-      get 'home'
-      response.should have_selector("title", 
-                  :content => @base_title + "Home")
+      visit '/pages/home'
+      page.should have_selector("title", :text => @base_title + "Home")
     end
   end
 
   describe "GET 'contact'" do
     it "should be successful" do
-      get 'contact'
-      response.should have_selector("title", 
-                  :content => @base_title + "Contact")
+      visit '/pages/contact'
+      page.should have_selector("title", :text => @base_title + "Contact")
     end
   end
 
   describe "GET 'about'" do
     it "should be successful" do
-      get 'about'
-      response.should have_selector("title", 
-                  :content => @base_title + "About")
+      visit '/pages/about'
+      page.should have_selector("title", :text => @base_title + "About")
     end
   end
 
