@@ -13,6 +13,7 @@ group :development do
 end
 
 group :test do
+	gem 'capybara', '1.1.2'
 	gem 'rspec-rails', '2.8.1'
 	gem 'webrat', '0.7.1'
 	gem 'spork', '0.9.0.rc8'
@@ -20,15 +21,19 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-#group :assets do
+group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.2'
+  gem 'uglifier', '>= 1.2.3'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
 
-  gem 'uglifier', '>= 1.2.3'
-#end
+end
+
+group :production do
+  gem 'pg', '0.12.2'
+end
 
 gem 'jquery-rails', '2.0.0'
 
